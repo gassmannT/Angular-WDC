@@ -1,0 +1,54 @@
+{
+  "name": "personeditor",
+  "description": "Testing mit Angular - Presentation",
+  "version": "1.0.0",
+  "author": "Thomas Bandixen & Thomas Gassmann",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbandixen/Testing-mit-Angular"
+  },
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "e2e": "tsc && concurrently \"http-server -s\" \"protractor protractor.config.js\" --kill-others --success first",
+    "lite": "lite-server",
+    "pree2e": "webdriver-manager update",
+    "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
+    "test-once": "tsc && karma start karma.conf.js --single-run",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@angular/common": "4.4.4",
+    "@angular/compiler": "4.4.4",
+    "@angular/core": "4.4.4",
+    "@angular/forms": "4.4.4",
+    "@angular/http": "4.4.4",
+    "@angular/platform-browser": "4.4.4",
+    "@angular/platform-browser-dynamic": "4.4.4",
+    "@angular/router": "4.4.4",
+    "bootstrap": "3.3.7",
+    "core-js": "2.5.1",
+    "reflect-metadata": "0.1.10",
+    "rxjs": "5.4.3",
+    "systemjs": "0.20.19",
+    "zone.js": "0.8.18"
+  },
+  "devDependencies": {
+    "@types/jasmine": "2.6.0",
+    "@types/node": "8.0.33",
+    "concurrently": "3.5.0",
+    "http-server": "0.10.0",
+    "jasmine-core": "2.8.0",
+    "karma": "1.7.1",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-cli": "1.0.1",
+    "karma-jasmine": "1.1.0",
+    "karma-jasmine-html-reporter": "0.2.2",
+    "karma-phantomjs-launcher": "1.0.4",
+    "lite-server": "2.3.0",
+    "lodash": "4.17.4",
+    "protractor": "5.1.2",
+    "typescript": "2.5.3"
+  }
+}
